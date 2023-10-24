@@ -1,0 +1,33 @@
+16:45:34.482 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 17.0.2 with PID 81432 (/Users/fefarias/Fede_Projects/cursos/microservicios/demo02_logs/demo_apm/target/classes started by fefarias in /Users/fefarias/Fede_Projects/cursos/microservicios/demo02_logs/demo_apm)
+16:45:34.485 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+16:45:35.762 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+16:45:35.775 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+16:45:35.776 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:45:35.776 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+16:45:35.886 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:45:35.890 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1332 ms
+16:45:36.239 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+16:45:36.252 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+16:45:36.258 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 2.695 seconds (process running for 3.332)
+16:46:59.811 [main] INFO  c.example.demo.DemoApplicationTests - Starting DemoApplicationTests using Java 17.0.2 with PID 81680 (started by fefarias in /Users/fefarias/Fede_Projects/cursos/microservicios/demo02_logs/demo_apm)
+16:46:59.813 [main] INFO  c.example.demo.DemoApplicationTests - No active profile set, falling back to 1 default profile: "default"
+16:47:00.863 [main] INFO  c.example.demo.DemoApplicationTests - Started DemoApplicationTests in 1.479 seconds (process running for 2.378)
+16:49:59.687 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 84063 (/Users/fefarias/Fede_Projects/cursos/microservicios/demo02_logs/demo_apm/target/demo-0.0.1-SNAPSHOT.jar started by fefarias in /Users/fefarias/Fede_Projects/cursos/microservicios/demo02_logs/demo_apm)
+16:49:59.693 [main] INFO  com.example.demo.DemoApplication - No active profile set, falling back to 1 default profile: "default"
+16:50:00.967 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+16:50:00.983 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+16:50:00.984 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:50:00.985 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+16:50:01.071 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:50:01.073 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1316 ms
+16:50:01.572 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+16:50:01.591 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+16:50:01.599 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 2.702 seconds (process running for 5.168)
+16:50:20.263 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:50:20.264 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+16:50:20.265 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+16:50:20.392 [http-nio-8080-exec-2] INFO  c.e.demo.controller.DemoController - Welcome home Page 2023-10-24T16:50:20.392912
+16:51:01.802 [http-nio-8080-exec-3] INFO  c.e.demo.controller.DemoController - Welcome home Page 2023-10-24T16:51:01.802789
+16:51:02.458 [http-nio-8080-exec-4] INFO  c.e.demo.controller.DemoController - Welcome home Page 2023-10-24T16:51:02.458788
+16:51:04.535 [http-nio-8080-exec-5] INFO  c.e.demo.controller.DemoController - Welcome home Page 2023-10-24T16:51:04.535297
+16:51:06.516 [http-nio-8080-exec-6] INFO  c.e.demo.controller.DemoController - Welcome home Page 2023-10-24T16:51:06.516677
