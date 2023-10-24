@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "37d7f356-db84-4aa0-bfc3-3c7baa3fdc23",
+		"name": "microservices-course-01",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2965861"
+	},
+	"item": [
+		{
+			"name": "Nueva Tarea",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"tarea de prueba\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/todo-list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"todo-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar tarea",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"tarea actualizada 2\",\n    \"done\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/todo-list/074f98bf-6add-4974-8770-f62ae4bf912d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"todo-list",
+						"074f98bf-6add-4974-8770-f62ae4bf912d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar tarea",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/todo-list/074f98bf-6add-4974-8770-f62ae4bf912d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"todo-list",
+						"074f98bf-6add-4974-8770-f62ae4bf912d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener todas las tareas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/todo-list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"todo-list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
