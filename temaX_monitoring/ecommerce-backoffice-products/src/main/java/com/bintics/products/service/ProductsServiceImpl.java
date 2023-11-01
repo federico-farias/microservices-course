@@ -5,7 +5,9 @@ import com.bintics.products.dto.ProductResponse;
 import com.bintics.products.dto.ProductRequest;
 import com.bintics.products.model.ProductModel;
 import com.bintics.products.repository.ProductsRepository;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.AllArgsConstructor;
+import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
@@ -46,6 +48,17 @@ public class ProductsServiceImpl implements ProductsService {
                         m.getUpdatedAt()))
                 .collect(Collectors.toList());
         return listResponse;
+    }
+
+    @Override
+    public ProductResponse findById(String id) {
+        return this.repository.findById(id).map(prod -> new ProductResponse(
+                prod.getId(),
+                prod.getName(),
+                prod.getPrice(),
+                prod.getCreatedAt(),
+                prod.getUpdatedAt()
+        )).orElse(null);
     }
 
     @Override

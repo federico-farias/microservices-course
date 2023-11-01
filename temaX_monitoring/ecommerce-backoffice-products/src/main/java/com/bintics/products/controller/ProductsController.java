@@ -3,6 +3,7 @@ package com.bintics.products.controller;
 import co.elastic.apm.api.CaptureSpan;
 import co.elastic.apm.api.CaptureTransaction;
 import com.bintics.products.dto.ProductRequest;
+import com.bintics.products.dto.ProductResponse;
 import com.bintics.products.service.ProductsService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -46,8 +47,19 @@ public class ProductsController {
         return ResponseEntity.ok().build();
     }
 
+    @GetMapping("/{id}")
+    @CaptureSpan
+    @CaptureTransaction
+    public ResponseEntity get(@PathVariable("id") String id) {
+        ProductResponse product = this.service.findById(id);
+        if (product == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(product);
+    }
+
     @DeleteMapping("/{id}")
-    public ResponseEntity update(@PathVariable("id") String id) {
+    public ResponseEntity delete(@PathVariable("id") String id) {
         this.service.delete(id);
         return ResponseEntity.noContent().build();
     }
