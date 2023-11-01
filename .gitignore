@@ -4,3 +4,5 @@ demo02_logs/demo_apm/logs/
 .DS_Store
 
 temaX_monitoring/ecommerce-backoffice-products/logs/
+
+temaX_monitoring/ecommerce-frontoffice-orders/logs/
