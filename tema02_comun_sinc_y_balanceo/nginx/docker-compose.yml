@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  web:
+    image: nginx
+    volumes:
+     - ./config:/etc/nginx/conf.d
+    ports:
+     - "8090:80"
+
+
