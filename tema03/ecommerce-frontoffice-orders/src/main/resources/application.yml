@@ -13,7 +13,7 @@ spring:
           products-service:
             url: http://localhost:8080/products/retry
             errorDecoder: com.bintics.orders.gateway.ProductsErrorDecoder
-            
+            retryer: com.bintics.orders.gateway.ProductsRetryer
   jpa:
     show-sql: true
     hibernate:
