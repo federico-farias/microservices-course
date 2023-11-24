@@ -32,6 +32,11 @@ public class ProductsController {
         return String.format("serverPort: %s", serverPort);
     }
 
+    @PostMapping("/retry/{id}")
+    public ResponseEntity retry(@PathVariable("id") String id) {
+        return ResponseEntity.internalServerError().body(id);
+    }
+
     @PostMapping
     public ResponseEntity create(@RequestBody ProductRequest request) {
         log.info("create-product");
