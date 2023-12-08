@@ -4,21 +4,35 @@ import com.bintics.orders.dto.AddProductsToOrder;
 import com.bintics.orders.dto.OrderRequest;
 import com.bintics.orders.service.OrdersService;
 import lombok.AllArgsConstructor;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
+import java.util.concurrent.TimeUnit;
 
 @RestController
-@AllArgsConstructor
 @RequestMapping("/orders")
 public class OrdersController {
 
     private final OrdersService service;
 
+    private final ValueOperations<String, Object> opsValue;
+
+    public OrdersController(OrdersService service, RedisTemplate<String, Object> redisTemplate) {
+        this.service = service;
+        this.opsValue = redisTemplate.opsForValue();
+    }
+
     @PostMapping
-    public ResponseEntity create(@RequestBody OrderRequest request) {
+    public ResponseEntity create(@RequestHeader("x-idempotency") String idempotency, @RequestBody OrderRequest request) {
+        String orderId = (String) this.opsValue.get(idempotency);
+        if (orderId != null) {
+            return ResponseEntity.created(URI.create(String.format("/orders/%s", orderId))).build();
+        }
         var id = this.service.create(request);
+        this.opsValue.set(idempotency, id, 1L, TimeUnit.MINUTES);
         return ResponseEntity.created(URI.create(String.format("/orders/%s", id))).build();
     }
 
